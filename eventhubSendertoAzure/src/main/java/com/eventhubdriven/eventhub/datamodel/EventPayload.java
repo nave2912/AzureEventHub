@@ -3,32 +3,41 @@ package com.eventhubdriven.eventhub.datamodel;
 import java.io.Serializable;
 
 public class EventPayload implements Serializable {
-	private String firstName;
-	private String lastName;
-	private String favoriteFood;
+	private String name;
+	private String email;
+	private String phone;
+	private String message;
 
-	public String getFirstName() {
-		return firstName;
+	public String getName() {
+		return name;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public String getLastName() {
-		return lastName;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
-	public String getFavoriteFood() {
-		return favoriteFood;
+	public String getPhone() {
+		return phone;
 	}
 
-	public void setFavoriteFood(String favoriteFood) {
-		this.favoriteFood = favoriteFood;
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
 	}
 
 }

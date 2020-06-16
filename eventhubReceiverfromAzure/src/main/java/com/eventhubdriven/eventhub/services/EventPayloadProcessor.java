@@ -12,6 +12,6 @@ class EventPayloadProcessor {
     private Logger log = LoggerFactory.getLogger(EventProcessorHostService.class);
 
     void process(EventPayload eventPayload) {
-        log.info("Hello! My name is {} and my favorite food is {}", eventPayload.getFirstName(), eventPayload.getFavoriteFood());
+        log.info("Hello! My name is {} and my favorite food is {}", eventPayload.getName(), eventPayload.getMessage());
     }
 }

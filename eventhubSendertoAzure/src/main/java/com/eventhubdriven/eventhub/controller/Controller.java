@@ -11,8 +11,8 @@ import com.eventhubdriven.eventhub.datamodel.EventPayload;
 import com.eventhubdriven.eventhub.services.EventHubService;
 
 @RestController
+@CrossOrigin(origins = "*")
 public class Controller {
-
 	private final EventHubService eventHubService;
 	private Logger log = LoggerFactory.getLogger(Controller.class);
 
@@ -21,7 +21,12 @@ public class Controller {
 		this.eventHubService = eventHubService;
 	}
 
-	@PostMapping(path = "/eventhub/send")
+	@GetMapping(path = "/test")
+	public String sendEvent() {
+		return "testMessage";
+	}
+
+	@PostMapping(path = "/message/send",consumes="application/json")
 	public ResponseEntity sendEvent(@RequestBody EventPayload payload) {
 		try {
 			log.info("Eventhub send endpoint called, sending {} to event hub..", payload.toString());
